@@ -52,5 +52,5 @@ $xml->endElement(); // </banda>
 /* fecha documento */
 $xml->endDocument();
 $xml->flush(); 
-sleep(3); 
+sleep(1); 
 ?>
