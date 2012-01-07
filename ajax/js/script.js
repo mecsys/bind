@@ -35,3 +35,20 @@ document.getElementById( 'discografia' ).innerHTML = album;
 document.getElementById( 'titulo_info' ).innerHTML = '<b><i>info</i></b>';
 }
 }
+
+function postDados( termometro ) {
+	xmlHttpPost = getXmlHttpRequest();
+	url_servidor = "";
+	url = url_servidor + "relatorio.php";
+	xmlHttpPost.open("POST",url,true);
+	xmlHttpPost.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+	xmlHttpPost.setRequestHeader("Content-length","termometro.length");
+	xmlHttpPost.setRequestHeader("Connection","close");
+	xmlHttpPost.onreadystatechange = dadosEnviados;
+	xmlHttpPost.send( "termometro="+termometro );
+	document.getElementById('term_info').innerHTML = 'Aguarde enquanto computamos seu voto...';
+}
+
+function dadosEnviados() {
+	document.getElementById('term_info').innerHTML = xmlHttpPost.responseText;
+}

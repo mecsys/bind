@@ -5,41 +5,54 @@
 		<script type="text/javascript" src="js/script.js"></script>
 	</head>
 <body>
-<center>
-<table bgcolor="#0" width=80%>
-<tr>
-<td colspan=4 align=center><font size=4 color="#FFFFFF"><b>BANDAS</b></font></td>
-</tr>
-<tr bgcolor="#EEEEEE">
-<td align=center><a href="javascript:carregarInfo('Angra');">Angra</a></td>
-<td align=center><a href="javascript:carregarInfo('Paralamas');">Paralamas</a></td>
-<td align=center><a href="javascript:carregarInfo('Raimundos');">Raimundos</a></td>
-<td align=center><a href="javascript:carregarInfo('Skank');">Skank</a></td>
-</tr>
-<tr>
-<td colspan=4 align=center>
-<table width=100% id="info">
-<tr bgcolor="#EEEEEE" height="35px">
-<td align=center colspan=2 id="titulo_info">
-<b><i>info</i></b>
-</td>
-</tr>
-<tr bgcolor="#EEEEEE">
-<td width=20%>Nome:</td>
-<td id="nome"></td>
-</tr>
-<tr bgcolor="#EEEEEE">
-<td width=20%>Integrantes:</td>
-<td id="integrantes"></td>
-</tr>
-<tr bgcolor="#EEEEEE">
-<td width=20%>Discografia:</td>
-<td id="discografia"></td>
-</tr>
-</table>
-</td>
-</tr>
-</table>
-</center>
+	<center>
+		<table bgcolor="#0" width=80%>
+			<tr>
+				<td colspan=4 align=center><font size=4 color="#FFFFFF"><b>BANDAS</b></font></td>
+			</tr>
+			<tr bgcolor="#EEEEEE">
+				<td align=center><a href="javascript:carregarInfo('Angra');">Angra</a></td>
+				<td align=center><a href="javascript:carregarInfo('Paralamas');">Paralamas</a></td>
+				<td align=center><a href="javascript:carregarInfo('Raimundos');">Raimundos</a></td>
+				<td align=center><a href="javascript:carregarInfo('Skank');">Skank</a></td>
+			</tr>
+			<tr>
+				<td colspan=4 align=center>
+					<table width=100% id="info">
+						<tr bgcolor="#EEEEEE" height="35px">
+							<td align=center colspan=2 id="titulo_info">
+								<b><i>info</i></b>
+							</td>
+						</tr>
+						<tr bgcolor="#EEEEEE">
+							<td width=20%>Nome:</td>
+							<td id="nome"></td>
+						</tr>
+						<tr bgcolor="#EEEEEE">
+							<td width=20%>Integrantes:</td>
+							<td id="integrantes"></td>
+						</tr>
+						<tr bgcolor="#EEEEEE">
+							<td width=20%>Discografia:</td>
+							<td id="discografia"></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr bgcolor="#EEEEEE">
+				<td colspan=1>Term&ocirc;metro:</td>
+				<td colspan=3>
+					<input type=radio name="term" value="BOM" onChange="javascript:postDados( this.value )">Bom
+					<input type=radio name="term" value="MEDIO" onChange="javascript:postDados( this.value)">M&eacute;dio
+					<input type=radio name="term" value="RUIM" onChange="javascript:postDados( this.value)">Ruim
+				</td>
+			</tr>
+			<tr bgcolor="#EEEEEE">
+				<td id="term_info" colspan=4>Vote agora!
+
+				</td>
+			</tr>
+		</table>
+	</center>
 </body>
 </html> 
